@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "signalrgb_effects", "signalrgb_effects\signalrgb_effects.csproj", "{D944C3DA-EDDE-434F-90F2-C0353CA45FE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cycle", "cycle\cycle.csproj", "{CE75FA5D-8793-4B5B-B0F4-B8D378C8C98F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D944C3DA-EDDE-434F-90F2-C0353CA45FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D944C3DA-EDDE-434F-90F2-C0353CA45FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D944C3DA-EDDE-434F-90F2-C0353CA45FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D944C3DA-EDDE-434F-90F2-C0353CA45FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE75FA5D-8793-4B5B-B0F4-B8D378C8C98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE75FA5D-8793-4B5B-B0F4-B8D378C8C98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE75FA5D-8793-4B5B-B0F4-B8D378C8C98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE75FA5D-8793-4B5B-B0F4-B8D378C8C98F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FCF3EA1-2FE1-46C1-BCC5-B3A7F664A585}
+	EndGlobalSection
+EndGlobal
