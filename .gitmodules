@@ -1,0 +1,6 @@
+[submodule "DesktopToast"]
+	path = DesktopToast
+	url = https://github.com/emoacht/DesktopToast.git
+[submodule "Notification.Wpf"]
+	path = Notification.Wpf
+	url = https://github.com/Platonenkov/Notification.Wpf.git
