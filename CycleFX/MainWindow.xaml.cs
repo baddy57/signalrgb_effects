@@ -1,7 +1,9 @@
-﻿using Notification.Wpf;
+﻿using Common;
+using Notification.Wpf;
 using Notification.Wpf.Classes;
 using System;
-using System.Diagnostics;
+using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -19,27 +21,36 @@ namespace CycleFX
             this.Hide();
 
             Fx newfx = Fetcher.getnext();
+            ShowNotification(newfx);
             newfx.apply();
+            Task.Run(async () => await Lib.MinimizeSignalRGB());
+            this.Close();
+        }
 
+        void ShowNotification(Fx fx)
+        {
             var notificationManager = new NotificationManager();
+
             var content = new NotificationContent
             {
-                Title = newfx.Title,
-                Message = newfx.cmd,
+                Title = fx.Title,
+                Message = fx.cmd,
                 Type = NotificationType.None,
                 CloseOnClick = true, // Set true if u want close message when left mouse button click on message (base = true)
 
                 Background = new SolidColorBrush(Colors.Black),
                 Foreground = new SolidColorBrush(Colors.White),
-
-                Image = new NotificationImage()
-                {
-                    Source = new BitmapImage(new Uri(newfx.Imgpath)),
-                    Position = ImagePosition.Top
-                }
             };
+
+            if (File.Exists(fx.Imgpath))
+            {
+                content.Image = new NotificationImage()
+                {
+                    Source = new BitmapImage(new Uri(fx.Imgpath)),
+                    Position = ImagePosition.Top
+                };
+            }
             notificationManager.Show(content);
-            this.Close();
         }
     }
 }

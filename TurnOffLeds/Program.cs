@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Common;
+using System.Diagnostics;
 
 void exec(string cmd)
 {
@@ -12,14 +13,16 @@ void exec(string cmd)
 
 //string escape = "^&";
 
-string install = "signalrgb://effect/install/Solid%20Color";
+//string install = "signalrgb://effect/install/Solid%20Color";
 string apply = "signalrgb://effect/apply/Solid%20Color?color=0";
 
-if (args.Length > 0 && args[0].Equals("-i"))
-{
-    exec(install);
-}
-else
-{
-    exec(apply);
-}
+//if (args.Length > 0 && args[0].Equals("-i"))
+//{
+//    exec(install);
+//}
+//else
+//{
+exec(apply);
+//}
+
+_ = Lib.MinimizeSignalRGB();
